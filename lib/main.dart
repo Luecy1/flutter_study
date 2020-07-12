@@ -29,6 +29,15 @@ class _RandomWordsState extends State<RandomWords> {
         title: Text('Startup Name generator'),
       ),
       body: _buildSuggestions(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Scaffold.of(context).showSnackBar(
+            SnackBar(
+              content: Text("hogehoge"),
+            )
+          );
+        },
+      ),
     );
   }
 
