@@ -30,13 +30,8 @@ class _RandomWordsState extends State<RandomWords> {
       ),
       body: _buildSuggestions(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Scaffold.of(context).showSnackBar(
-            SnackBar(
-              content: Text("hogehoge"),
-            )
-          );
-        },
+        child: Icon(Icons.add),
+        onPressed: () {},
       ),
     );
   }
