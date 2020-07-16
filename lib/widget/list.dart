@@ -15,7 +15,8 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Listview"),
+        title: Text("Listview"
+            ""),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
