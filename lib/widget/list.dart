@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_study/widget/subpage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,9 +19,11 @@ class ListPage extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         children: <Widget>[
           ListTile(
-            title: Text("1"),
+            title: Text("subpage"),
             onTap: () {
-              log("Tap!");
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return SubPage();
+              }));
             },
           )
         ],
