@@ -8,8 +8,14 @@ class SubPage extends StatelessWidget {
         title: Text("page2"),
       ),
       body: Container(
-        child: Text("page2"),
-      ),
+          child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset('images/pic1.png'),
+          Image.asset('images/pic2.png'),
+          Image.asset('images/pic3.png'),
+        ],
+      )),
     );
   }
 }
