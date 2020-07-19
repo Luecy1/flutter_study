@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/widget/LayoutBasic.dart';
 import 'package:flutter_study/widget/subpage.dart';
 
 void main() {
@@ -23,6 +24,14 @@ class ListPage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
                 return SubPage();
+              }));
+            },
+          ),
+          ListTile(
+            title: Text("layout basic"),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return LayoutBasic();
               }));
             },
           )
