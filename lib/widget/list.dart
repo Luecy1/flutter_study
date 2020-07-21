@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/Card.dart';
+import 'package:flutter_study/widget/CardList.dart';
 import 'package:flutter_study/widget/LayoutBasic.dart';
 import 'package:flutter_study/widget/subpage.dart';
 
@@ -41,6 +42,14 @@ class ListPage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
                 return CardPage();
+              }));
+            },
+          ),
+          ListTile(
+            title: Text("card list"),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return CardListPage();
               }));
             },
           ),
