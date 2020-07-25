@@ -3,6 +3,7 @@ import 'package:flutter_study/widget/Card.dart';
 import 'package:flutter_study/widget/CardList.dart';
 import 'package:flutter_study/widget/GridList.dart';
 import 'package:flutter_study/widget/LayoutBasic.dart';
+import 'package:flutter_study/widget/Network.dart';
 import 'package:flutter_study/widget/subpage.dart';
 
 void main() {
@@ -62,6 +63,14 @@ class ListPage extends StatelessWidget {
               }));
             },
           ),
+          ListTile(
+            title: Text("network"),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return NetworkPage();
+              }));
+            },
+          )
         ],
       ),
     );
