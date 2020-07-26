@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/Card.dart';
 import 'package:flutter_study/widget/CardList.dart';
 import 'package:flutter_study/widget/GridList.dart';
+import 'package:flutter_study/widget/Input.dart';
 import 'package:flutter_study/widget/LayoutBasic.dart';
 import 'package:flutter_study/widget/Network.dart';
 import 'package:flutter_study/widget/subpage.dart';
@@ -68,6 +69,14 @@ class ListPage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
                 return NetworkPage();
+              }));
+            },
+          ),
+          ListTile(
+            title: Text('Input'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return InputPage();
               }));
             },
           )
