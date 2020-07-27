@@ -86,23 +86,11 @@ class _MyRadioButtonWidgetState extends State<_MyRadioButtonWidget> {
   SingingCharacter _character = SingingCharacter.oya;
 
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        ListTile(
-          title: const Text('oya'),
-          leading: Radio(
-            value: SingingCharacter.oya,
-            groupValue: _character,
-            onChanged: (SingingCharacter value) {
-              setState(() {
-                _character = value;
-              });
-            },
-          ),
-        ),
-        ListTile(
-          title: const Text('ko'),
-          leading: Radio(
+        Row(children: <Widget>[
+          Radio(
             value: SingingCharacter.ko,
             groupValue: _character,
             onChanged: (SingingCharacter value) {
@@ -111,7 +99,20 @@ class _MyRadioButtonWidgetState extends State<_MyRadioButtonWidget> {
               });
             },
           ),
-        ),
+          Text('ko'),
+        ]),
+        Row(children: <Widget>[
+          Radio(
+            value: SingingCharacter.oya,
+            groupValue: _character,
+            onChanged: (SingingCharacter value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
+          Text('oya'),
+        ]),
       ],
     );
   }
