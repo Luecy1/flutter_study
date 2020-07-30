@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/Card.dart';
 import 'package:flutter_study/widget/CardList.dart';
+import 'package:flutter_study/widget/Grid.dart';
 import 'package:flutter_study/widget/GridList.dart';
 import 'package:flutter_study/widget/Input.dart';
 import 'package:flutter_study/widget/LayoutBasic.dart';
@@ -79,7 +80,15 @@ class ListPage extends StatelessWidget {
                 return InputPage();
               }));
             },
-          )
+          ),
+          ListTile(
+            title: Text('Grid List'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return GridListPage2();
+              }));
+            },
+          ),
         ],
       ),
     );

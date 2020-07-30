@@ -17,12 +17,12 @@ class _GridList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GridView.count(
-        crossAxisCount: 4,
+        crossAxisCount: 2,
         children: List.generate(1000, (index) {
           return Center(
             child: Text(
               'Item $index',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.headline4,
             ),
           );
         }),
