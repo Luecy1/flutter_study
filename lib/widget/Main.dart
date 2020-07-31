@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/Card.dart';
 import 'package:flutter_study/widget/CardList.dart';
+import 'package:flutter_study/widget/DataTable.dart';
 import 'package:flutter_study/widget/Grid.dart';
 import 'package:flutter_study/widget/GridList.dart';
 import 'package:flutter_study/widget/Input.dart';
@@ -86,6 +87,14 @@ class ListPage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
                 return GridListPage2();
+              }));
+            },
+          ),
+          ListTile(
+            title: Text('Datatable'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return DataTablePage();
               }));
             },
           ),
