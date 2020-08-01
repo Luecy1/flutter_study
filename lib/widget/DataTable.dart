@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/dart/main.dart';
 
 class DataTablePage extends StatelessWidget {
   static const String _title = 'Flutter Code Sample';
@@ -25,19 +26,23 @@ class _DataTableWidget extends StatelessWidget {
       return 20 + index * 10;
     });
 
-    final dataColumnList = huList.map((hu) {
-      return DataColumn(
-        label: Text(
-          ' ${hu}符 ',
-          style: TextStyle(fontStyle: FontStyle.italic),
-        ),
-      );
-    }).toList();
+    final dataColumnList = [DataColumn(label: Text(''))] +
+        huList.map((hu) {
+          return DataColumn(
+            label: Text(
+              ' ${hu}符 ',
+              style: TextStyle(fontStyle: FontStyle.italic),
+            ),
+          );
+        }).toList();
 
     final rowList = hanList.map((han) {
-      final dataCellList = huList.map((hu) {
-        return DataCell(Text(' ${hu} 翻 ${han} 符 '));
-      }).toList();
+      final hanText = [DataCell(Text('${han} 翻'))];
+
+      final dataCellList = hanText +
+          huList.map((hu) {
+            return DataCell(Text(' ${calc(hu, han).toString()} 点 '));
+          }).toList();
       return DataRow(cells: dataCellList);
     }).toList();
 
