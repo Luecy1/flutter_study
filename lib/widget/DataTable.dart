@@ -17,39 +17,36 @@ class _DataTableWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var rowList = List<DataRow>.generate(1000, (int index) {
-      return DataRow(cells: [
-        DataCell(Text('aaaaaaaaaaaaaaaaaaaaaa')),
-        DataCell(Text(index.toString())),
-        DataCell(Text('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')),
-      ]);
+    final hanList = List.generate(13, (index) {
+      return index + 1;
     });
+
+    final huList = List.generate(5, (index) {
+      return 20 + index * 10;
+    });
+
+    final dataColumnList = huList.map((hu) {
+      return DataColumn(
+        label: Text(
+          ' ${hu}符 ',
+          style: TextStyle(fontStyle: FontStyle.italic),
+        ),
+      );
+    }).toList();
+
+    final rowList = hanList.map((han) {
+      final dataCellList = huList.map((hu) {
+        return DataCell(Text(' ${hu} 翻 ${han} 符 '));
+      }).toList();
+      return DataRow(cells: dataCellList);
+    }).toList();
 
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: DataTable(
-          columns: const <DataColumn>[
-            DataColumn(
-              label: Text(
-                'Name',
-                style: TextStyle(fontStyle: FontStyle.italic),
-              ),
-            ),
-            DataColumn(
-              label: Text(
-                'Age',
-                style: TextStyle(fontStyle: FontStyle.italic),
-              ),
-            ),
-            DataColumn(
-              label: Text(
-                'Role',
-                style: TextStyle(fontStyle: FontStyle.italic),
-              ),
-            ),
-          ],
+          columns: dataColumnList,
           rows: rowList,
         ),
       ),
