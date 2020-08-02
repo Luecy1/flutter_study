@@ -18,11 +18,11 @@ class _DataTableWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final hanList = List.generate(13, (index) {
+    final hanList = List.generate(20, (index) {
       return index + 1;
     });
 
-    final huList = List.generate(5, (index) {
+    final huList = List.generate(8, (index) {
       return 20 + index * 10;
     });
 
