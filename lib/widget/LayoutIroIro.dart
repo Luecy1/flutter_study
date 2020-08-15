@@ -15,20 +15,35 @@ class LayoutIroIro extends StatelessWidget {
 class _MyLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        constraints: BoxConstraints.expand(),
-        margin: const EdgeInsets.all(30.0),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.pink),
-        ),
-        child: FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text(
-            'あいうえお',
+    return Column(
+      children: [
+        Container(
+          width: double.infinity,
+          margin: const EdgeInsets.all(30.0),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.pink),
+          ),
+          child: FittedBox(
+            fit: BoxFit.fitWidth,
+            child: Text(
+              '通勤快速',
+            ),
           ),
         ),
-      ),
+        Container(
+          width: double.infinity,
+          margin: const EdgeInsets.all(30.0),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.pink),
+          ),
+          child: FittedBox(
+            fit: BoxFit.fitWidth,
+            child: Text(
+              '11:30',
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
