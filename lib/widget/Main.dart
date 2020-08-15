@@ -6,6 +6,7 @@ import 'package:flutter_study/widget/Grid.dart';
 import 'package:flutter_study/widget/GridList.dart';
 import 'package:flutter_study/widget/Input.dart';
 import 'package:flutter_study/widget/LayoutBasic.dart';
+import 'package:flutter_study/widget/LayoutIroIro.dart';
 import 'package:flutter_study/widget/Network.dart';
 import 'package:flutter_study/widget/subpage.dart';
 
@@ -95,6 +96,14 @@ class ListPage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
                 return DataTablePage();
+              }));
+            },
+          ),
+          ListTile(
+            title: Text('LayoutIroIro'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                return LayoutIroIro();
               }));
             },
           ),
